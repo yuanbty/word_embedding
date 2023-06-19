@@ -1,6 +1,8 @@
 # Word Embedding for Financial News
-Pytorch implementation of skip-gram model(Word2Vec) and t-SNE visualization/ most similar word for specific financial news built in 5 days
+Pytorch implementation of skip-gram model(Word2Vec) and t-SNE visualization/ most similar word for specific financial news that I built in 5 days.
 
+#### Motivation(Short):
+With all factors, I wish to develop a financial advising model powered by word embeddings for the stock beginners, to help them seize the key information and close the gap with veteran traders or financial institutions.
 
 ### Requirement
 * pytorch
