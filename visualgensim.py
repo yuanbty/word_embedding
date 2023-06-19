@@ -11,12 +11,12 @@ from sklearn.manifold import TSNE
 train_dataset = NewsDataset()
 vocab_size = len(train_dataset.vocab)
 model = Skipgram(vocab_size)
-model.load_state_dict(torch.load('model2.pth')['model_state_dict'])
+model.load_state_dict(torch.load('MODELNAME.pth')['model_state_dict'])
 embedding_layer = model.embedding_center.weight.data
 
-loss = torch.load('model2.pth')['losses']
-count = torch.load('model2.pth')['count']
-index_word = torch.load('model2.pth')['index']
+loss = torch.load('MODELNAME.pth')['losses']
+count = torch.load('MODELNAME.pth')['count']
+index_word = torch.load('MODELNAME.pth')['index']
 vocab = train_dataset.vocab
 
 
@@ -42,7 +42,8 @@ def visualize(embedding):
         
     plt.scatter(x[vocab_idx], y[vocab_idx], s = 3)
     plt.annotate(word, xy = (x[vocab_idx], y[vocab_idx]), ha='right',va='bottom', fontsize=5)
-    #plt.savefig('visual50.png')
+    #plt.savefig('visual50.png')   <--- save your figure
+    plt.show()
     return x, y
 
 def most_similar(word, topN, coord_x, coord_y):
@@ -63,3 +64,8 @@ def most_similar(word, topN, coord_x, coord_y):
         
         result = sorted(result.items(), key=lambda x:x[1])[1:topN+1]
         return result
+   
+x, y = visualize(embedding_layer)
+TOPN = 15
+WORDYOUWANT = 'bank'
+most_similar(WORDYOUWANT, TOPN, x, y)
