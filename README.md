@@ -36,4 +36,6 @@ python3 train.py
 ```python
 python3 visualgensim.py
 ```
+For similar words, you need to change these two variables`TOPN` and `Word` to your choices
+
 
