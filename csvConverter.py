@@ -4,10 +4,10 @@ import csv
 from csv import DictReader, writer
 
 
-files = glob.glob('/Users/yuantian/Desktop/Financial_Word_Embedding/archive/2018_05_11/*.json', recursive=True)
+files = glob.glob('/DIR_PATHWAY/*.json', recursive=True)
 
 
-csv_file = f'/Users/yuantian/Desktop/Financial_Word_Embedding/2018_05_11output.csv'
+csv_file = f'/OUTPUT_PATHWAY/FILE_NAME.csv'
 with open(csv_file, 'w', newline='') as csvfile:
     
         writer = csv.writer(csvfile)
