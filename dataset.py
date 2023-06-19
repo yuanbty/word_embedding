@@ -21,7 +21,7 @@ class NewsDataset(Dataset):
 
     def __init__(self):
         '''load data'''
-        self.df = pd.read_csv('~/Desktop/Financial_Word_Embedding/data/small_sample2.csv')
+        self.df = pd.read_csv('/DIR_PATHWAY/small_sample2.csv')
         token_list = self.df_to_token(self.df)
         vocab, count, index, total = self.vocabulary(token_list)
         self.vocab = vocab
