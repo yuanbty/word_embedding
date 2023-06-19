@@ -68,4 +68,5 @@ def most_similar(word, topN, coord_x, coord_y):
 x, y = visualize(embedding_layer)
 TOPN = 15
 WORDYOUWANT = 'bank'
-most_similar(WORDYOUWANT, TOPN, x, y)
+print('The Top',TOPN, 'similar words of', WORDYOUWANT, 'are')
+print(most_similar(WORDYOUWANT, TOPN, x, y))
